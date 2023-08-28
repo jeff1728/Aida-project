@@ -11,11 +11,13 @@ package aida.frame;
  */
 public class PublicEntity {
     /*
-    
+    ---------- nuevas lineas ------------
     Entidad Publica
     Proporciona valores adeudados 
     de los clientes de AIDA
     
     */
+    public int nombre;
+    
     
 }
