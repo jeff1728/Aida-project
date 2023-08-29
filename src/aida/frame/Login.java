@@ -237,8 +237,8 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "el usuario o contraseña no es correcto, vuelva a intentar");
         }else{
         this.setVisible(false);
-        ServicePay pay=new ServicePay();
-        pay.setVisible(true);
+        Selection m=new Selection();
+        m.setVisible(true);
         }
         
         User a2=null;
