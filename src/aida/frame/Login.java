@@ -265,7 +265,7 @@ public class Login extends javax.swing.JFrame {
         inicioRegistro.setVisible(true);
     }//GEN-LAST:event_btnregresarOpcionActionPerformed
 
-    /**
+    /** 
      * @param args the command line arguments
      */
     public static void main(String args[]) {
