@@ -227,7 +227,20 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jpasswordMousePressed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        JOptionPane.showMessageDialog(null, "USER:  "+txtusuario.getText()+"\n PASSWORD: "+jpassword.getText());
+        //JOptionPane.showMessageDialog(null, "USER:  "+txtusuario.getText()+"\n PASSWORD: "+jpassword.getText());
+        String usuario="admin";
+        String pass="123456"; 
+        if(!txtusuario.getText().equals(usuario)){
+            JOptionPane.showMessageDialog(null, "el usuario o contraseña no es correcto, vuelva a intentar");
+        }
+        if(jpassword.getText() == null ? pass != null : !jpassword.getText().equals(pass)){
+            JOptionPane.showMessageDialog(null, "el usuario o contraseña no es correcto, vuelva a intentar");
+        }else{
+        this.setVisible(false);
+        ServicePay pay=new ServicePay();
+        pay.setVisible(true);
+        }
+        
         User a2=null;
         for(int i=0;i<Register.modelo.size();i++){
             a2= (User) Register.modelo.get(i);
@@ -237,9 +250,7 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "la contraseña o el usuario es incorrecto");
             return;
         }*/
-        this.setVisible(false);
-        ServicePay pay=new ServicePay();
-        pay.setVisible(true);
+        
 
     }//GEN-LAST:event_btnEntrarActionPerformed
 
