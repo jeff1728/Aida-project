@@ -54,6 +54,11 @@ public class welcome extends javax.swing.JFrame {
 
         btninicio.setFont(new java.awt.Font("Cutive", 0, 24)); // NOI18N
         btninicio.setText("INICIO");
+        btninicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btninicioActionPerformed(evt);
+            }
+        });
         getContentPane().add(btninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 200, 70));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/c1ba3e56-7e2f-476e-917b-85071ffca000 (1).jpg"))); // NOI18N
@@ -61,6 +66,13 @@ public class welcome extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btninicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninicioActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        InicioRegistro i1=new InicioRegistro();
+        i1.setVisible(true);
+    }//GEN-LAST:event_btninicioActionPerformed
 
     /**
      * @param args the command line arguments

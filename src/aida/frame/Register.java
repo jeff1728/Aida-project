@@ -33,10 +33,7 @@ public class Register extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         txtnombres = new javax.swing.JTextField();
         txtcorreo = new javax.swing.JTextField();
         txtidentificacion = new javax.swing.JTextField();
@@ -47,6 +44,8 @@ public class Register extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         btnIngresar = new javax.swing.JButton();
         txtpin = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
@@ -57,30 +56,19 @@ public class Register extends javax.swing.JFrame {
         jSeparator8 = new javax.swing.JSeparator();
         txtnumeroCuenta = new javax.swing.JTextField();
         btnVer = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(52, 73, 94));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/2023_07_16_18_13_39_Generador_de_logos_Crea_logos_increíbles_al_instante.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 130, 90));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/2023_07_16_18_13_39_Generador_de_logos_Crea_logos_increíbles_al_instante.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 80));
-
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Roboto Light", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(241, 196, 15));
-        jLabel3.setText("Registro de Datos ");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
-
+        txtnombres.setBackground(new java.awt.Color(0, 51, 204));
         txtnombres.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
-        txtnombres.setForeground(new java.awt.Color(102, 102, 102));
+        txtnombres.setForeground(new java.awt.Color(255, 255, 255));
         txtnombres.setText("Nombres Completos");
         txtnombres.setBorder(null);
         txtnombres.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -88,10 +76,11 @@ public class Register extends javax.swing.JFrame {
                 txtnombresMousePressed(evt);
             }
         });
-        jPanel2.add(txtnombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 99, -1, -1));
+        jPanel2.add(txtnombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, -1, -1));
 
+        txtcorreo.setBackground(new java.awt.Color(0, 51, 204));
         txtcorreo.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
-        txtcorreo.setForeground(new java.awt.Color(102, 102, 102));
+        txtcorreo.setForeground(new java.awt.Color(255, 255, 255));
         txtcorreo.setText("Correo electronico");
         txtcorreo.setBorder(null);
         txtcorreo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -104,10 +93,11 @@ public class Register extends javax.swing.JFrame {
                 txtcorreoActionPerformed(evt);
             }
         });
-        jPanel2.add(txtcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 164, -1, -1));
+        jPanel2.add(txtcorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
 
+        txtidentificacion.setBackground(new java.awt.Color(0, 51, 204));
         txtidentificacion.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
-        txtidentificacion.setForeground(new java.awt.Color(102, 102, 102));
+        txtidentificacion.setForeground(new java.awt.Color(255, 255, 255));
         txtidentificacion.setText("Cédula");
         txtidentificacion.setBorder(null);
         txtidentificacion.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -115,10 +105,11 @@ public class Register extends javax.swing.JFrame {
                 txtidentificacionMousePressed(evt);
             }
         });
-        jPanel2.add(txtidentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+        jPanel2.add(txtidentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, -1, -1));
 
+        txtcelular.setBackground(new java.awt.Color(0, 51, 204));
         txtcelular.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
-        txtcelular.setForeground(new java.awt.Color(102, 102, 102));
+        txtcelular.setForeground(new java.awt.Color(255, 255, 255));
         txtcelular.setText("Numero de telefono");
         txtcelular.setBorder(null);
         txtcelular.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -126,24 +117,32 @@ public class Register extends javax.swing.JFrame {
                 txtcelularMousePressed(evt);
             }
         });
-        jPanel2.add(txtcelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, -1));
-        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 123, 123, 10));
-        jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 188, 123, 10));
-        jPanel2.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 251, 123, 10));
-        jPanel2.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 140, 10));
+        jPanel2.add(txtcelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, -1, -1));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 123, 10));
+        jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 123, 10));
+        jPanel2.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 123, 10));
+        jPanel2.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 140, 10));
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Ver");
         jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(241, 196, 15)));
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 530, 80, 40));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 540, 80, 40));
 
         jLabel4.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Ingresar");
         jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(241, 196, 15)));
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, 80, 40));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, 80, 40));
+
+        jLabel7.setFont(new java.awt.Font("Roboto Medium", 0, 36)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("REGISTRO");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 200, 30));
+
+        jTextField1.setBackground(new java.awt.Color(111, 156, 198));
+        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 70));
 
         btnIngresar.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
         btnIngresar.setForeground(new java.awt.Color(240, 240, 240));
@@ -153,10 +152,11 @@ public class Register extends javax.swing.JFrame {
                 btnIngresarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, 80, 40));
+        jPanel2.add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 540, 80, 40));
 
+        txtpin.setBackground(new java.awt.Color(0, 51, 204));
         txtpin.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
-        txtpin.setForeground(new java.awt.Color(102, 102, 102));
+        txtpin.setForeground(new java.awt.Color(255, 255, 255));
         txtpin.setText("PIN");
         txtpin.setBorder(null);
         txtpin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -169,11 +169,12 @@ public class Register extends javax.swing.JFrame {
                 txtpinActionPerformed(evt);
             }
         });
-        jPanel2.add(txtpin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, -1, -1));
-        jPanel2.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 100, 10));
+        jPanel2.add(txtpin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, -1, -1));
+        jPanel2.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 100, 10));
 
+        txtfechaN.setBackground(new java.awt.Color(0, 51, 204));
         txtfechaN.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
-        txtfechaN.setForeground(new java.awt.Color(102, 102, 102));
+        txtfechaN.setForeground(new java.awt.Color(255, 255, 255));
         txtfechaN.setText("Fecha de Nacimiento");
         txtfechaN.setBorder(null);
         txtfechaN.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -181,12 +182,13 @@ public class Register extends javax.swing.JFrame {
                 txtfechaNMousePressed(evt);
             }
         });
-        jPanel2.add(txtfechaN, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, -1, -1));
-        jPanel2.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 123, 10));
-        jPanel2.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 123, 10));
+        jPanel2.add(txtfechaN, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, -1, -1));
+        jPanel2.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 410, 123, 10));
+        jPanel2.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 460, 123, 10));
 
+        txtcontrasena.setBackground(new java.awt.Color(0, 51, 204));
         txtcontrasena.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
-        txtcontrasena.setForeground(new java.awt.Color(102, 102, 102));
+        txtcontrasena.setForeground(new java.awt.Color(255, 255, 255));
         txtcontrasena.setText("Contraseña");
         txtcontrasena.setBorder(null);
         txtcontrasena.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -194,11 +196,12 @@ public class Register extends javax.swing.JFrame {
                 txtcontrasenaMousePressed(evt);
             }
         });
-        jPanel2.add(txtcontrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
-        jPanel2.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 123, 10));
+        jPanel2.add(txtcontrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, -1, -1));
+        jPanel2.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 510, 123, 10));
 
+        txtnumeroCuenta.setBackground(new java.awt.Color(0, 51, 204));
         txtnumeroCuenta.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
-        txtnumeroCuenta.setForeground(new java.awt.Color(102, 102, 102));
+        txtnumeroCuenta.setForeground(new java.awt.Color(255, 255, 255));
         txtnumeroCuenta.setText("Número de Cuenta");
         txtnumeroCuenta.setBorder(null);
         txtnumeroCuenta.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -206,26 +209,31 @@ public class Register extends javax.swing.JFrame {
                 txtnumeroCuentaMousePressed(evt);
             }
         });
-        jPanel2.add(txtnumeroCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
+        jPanel2.add(txtnumeroCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 490, -1, -1));
 
         btnVer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVerActionPerformed(evt);
             }
         });
-        jPanel2.add(btnVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 530, 80, 40));
+        jPanel2.add(btnVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 540, 80, 40));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 340, 600));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/9088655f-57d7-4c8d-b04c-343e846c196a.jpg"))); // NOI18N
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 660));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 660));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 633, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -596,11 +604,10 @@ public class Register extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIngresar;
     private javax.swing.JButton btnVer;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
@@ -611,13 +618,14 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
-    private javax.swing.JTextField txtcelular;
-    private javax.swing.JTextField txtcontrasena;
-    private javax.swing.JTextField txtcorreo;
-    private javax.swing.JTextField txtfechaN;
-    private javax.swing.JTextField txtidentificacion;
-    private javax.swing.JTextField txtnombres;
-    private javax.swing.JTextField txtnumeroCuenta;
-    private javax.swing.JTextField txtpin;
+    private javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField txtcelular;
+    public javax.swing.JTextField txtcontrasena;
+    public javax.swing.JTextField txtcorreo;
+    public javax.swing.JTextField txtfechaN;
+    public javax.swing.JTextField txtidentificacion;
+    public javax.swing.JTextField txtnombres;
+    public javax.swing.JTextField txtnumeroCuenta;
+    public javax.swing.JTextField txtpin;
     // End of variables declaration//GEN-END:variables
 }

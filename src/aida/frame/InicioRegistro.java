@@ -28,9 +28,9 @@ public class InicioRegistro extends javax.swing.JFrame {
 
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btninicioS = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        btnR = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,22 +44,46 @@ public class InicioRegistro extends javax.swing.JFrame {
         jLabel4.setText("AIDA");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 90, 30));
 
-        jButton1.setFont(new java.awt.Font("Cutive", 0, 18)); // NOI18N
-        jButton1.setText("INICIO DE SESIÓN");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
+        btninicioS.setFont(new java.awt.Font("Cutive", 0, 18)); // NOI18N
+        btninicioS.setText("INICIO DE SESIÓN");
+        btninicioS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btninicioSActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btninicioS, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
 
         jTextField1.setBackground(new java.awt.Color(111, 156, 198));
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 70));
 
-        jButton2.setFont(new java.awt.Font("Cutive", 0, 18)); // NOI18N
-        jButton2.setText("REGISTRO");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 420, 240, -1));
+        btnR.setFont(new java.awt.Font("Cutive", 0, 18)); // NOI18N
+        btnR.setText("REGISTRO");
+        btnR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnR, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 420, 240, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/9088655f-57d7-4c8d-b04c-343e846c196a.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 6, 390, 650));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btninicioSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninicioSActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Login l=new Login();
+        l.setVisible(true);
+    }//GEN-LAST:event_btninicioSActionPerformed
+
+    private void btnRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Register r=new Register();
+        r.setVisible(true);
+    }//GEN-LAST:event_btnRActionPerformed
 
     /**
      * @param args the command line arguments
@@ -97,8 +121,8 @@ public class InicioRegistro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnR;
+    private javax.swing.JButton btninicioS;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
